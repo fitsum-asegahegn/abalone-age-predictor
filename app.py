@@ -1,12 +1,11 @@
 import io
 import json
 
-import joblib
 import numpy as np
 import pandas as pd
 import streamlit as st
 
-from abalone_tools import FEATURES, NUMERIC, LIMITS, DEFAULTS, prepare
+from abalone_runtime import FEATURES, NUMERIC, LIMITS, DEFAULTS, NumpyModel, prepare
 
 MM = 200.0
 UNITS = {"Millimetres and grams": MM, "Dataset units (value / 200)": 1.0}
@@ -19,7 +18,7 @@ st.set_page_config(page_title="Abalone Age Predictor", page_icon="🐚", layout=
 
 @st.cache_resource
 def load_artifacts():
-    model = joblib.load("abalone_model.joblib")
+    model = NumpyModel("abalone_model.npz")
     with open("model_meta.json") as f:
         meta = json.load(f)
     return model, meta
