@@ -1,0 +1,169 @@
+{
+ "test": {
+  "RMSE": [
+   2.036,
+   1.882,
+   2.203
+  ],
+  "MAE": [
+   1.451,
+   1.356,
+   1.555
+  ],
+  "R2": [
+   0.643,
+   0.602,
+   0.678
+  ]
+ },
+ "baseline_rmse": 3.412,
+ "within": {
+  "1 ring": 0.495,
+  "2 rings": 0.759,
+  "3 rings": 0.888
+ },
+ "comparison": [
+  {
+   "model": "Random Forest (selected)",
+   "mean RMSE": 2.139,
+   "std RMSE": 0.127,
+   "mean MAE": 1.502,
+   "mean R2": 0.544,
+   "RMSE gap vs best": 0.0,
+   "p-value": null
+  },
+  {
+   "model": "Ridge",
+   "mean RMSE": 2.146,
+   "std RMSE": 0.114,
+   "mean MAE": 1.55,
+   "mean R2": 0.541,
+   "RMSE gap vs best": 0.007,
+   "p-value": 0.788
+  },
+  {
+   "model": "Linear",
+   "mean RMSE": 2.147,
+   "std RMSE": 0.113,
+   "mean MAE": 1.55,
+   "mean R2": 0.541,
+   "RMSE gap vs best": 0.007,
+   "p-value": 0.782
+  },
+  {
+   "model": "Gradient Boosting",
+   "mean RMSE": 2.152,
+   "std RMSE": 0.134,
+   "mean MAE": 1.502,
+   "mean R2": 0.539,
+   "RMSE gap vs best": 0.013,
+   "p-value": 0.258
+  },
+  {
+   "model": "Baseline (mean)",
+   "mean RMSE": 3.175,
+   "std RMSE": 0.137,
+   "mean MAE": 2.324,
+   "mean R2": -0.004,
+   "RMSE gap vs best": 1.035,
+   "p-value": 0.0
+  }
+ ],
+ "by_sex": [
+  {
+   "group": "F",
+   "n": 272,
+   "bias": 0.22,
+   "MAE": 1.734,
+   "RMSE": 2.435
+  },
+  {
+   "group": "I",
+   "n": 268,
+   "bias": -0.157,
+   "MAE": 1.042,
+   "RMSE": 1.363
+  },
+  {
+   "group": "M",
+   "n": 294,
+   "bias": 0.184,
+   "MAE": 1.561,
+   "RMSE": 2.138
+  }
+ ],
+ "by_rings": [
+  {
+   "group": "1-6",
+   "n": 101,
+   "bias": -0.825,
+   "MAE": 1.037,
+   "RMSE": 1.328
+  },
+  {
+   "group": "7-9",
+   "n": 296,
+   "bias": -0.798,
+   "MAE": 1.139,
+   "RMSE": 1.435
+  },
+  {
+   "group": "10-12",
+   "n": 278,
+   "bias": -0.038,
+   "MAE": 1.169,
+   "RMSE": 1.548
+  },
+  {
+   "group": "13+",
+   "n": 159,
+   "bias": 2.529,
+   "MAE": 2.786,
+   "RMSE": 3.548
+  }
+ ],
+ "importance": {
+  "Shell_weight": 1.434,
+  "Shucked_weight": 0.972,
+  "Whole_weight": 0.849,
+  "Height": 0.053,
+  "Sex": 0.051,
+  "Viscera_weight": 0.029,
+  "Diameter": 0.027,
+  "Length": 0.009
+ },
+ "learning": [
+  {
+   "rows": 266,
+   "train": 1.922,
+   "cv": 2.231
+  },
+  {
+   "rows": 533,
+   "train": 1.832,
+   "cv": 2.198
+  },
+  {
+   "rows": 1067,
+   "train": 1.802,
+   "cv": 2.163
+  },
+  {
+   "rows": 1600,
+   "train": 1.777,
+   "cv": 2.145
+  },
+  {
+   "rows": 2134,
+   "train": 1.775,
+   "cv": 2.128
+  },
+  {
+   "rows": 2668,
+   "train": 1.773,
+   "cv": 2.139
+  }
+ ],
+ "coverage_80": 0.814,
+ "removed_rows": 8
+}
